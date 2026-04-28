@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>💓💓💓 Para ti Gissel 💓💓💓</title>
+
+<style>
+body{
+margin:0;
+font-family:'Segoe UI',sans-serif;
+background:linear-gradient(135deg,#5a0f7a,#a64de4,#e18cee);
+background-size:400% 400%;
+animation:fondoAnimado 10s ease infinite;
+display:flex;
+flex-direction:column;
+align-items:center;
+min-height:100vh;
+color:#fff;
+overflow-x:hidden;
+text-align:center;
+}
+
+@keyframes fondoAnimado{
+0%{background-position:0% 50%;}
+50%{background-position:100% 50%;}
+100%{background-position:0% 50%;}
+}
+
+.header-img{
+position:relative;
+margin:20px;
+display:flex;
+justify-content:center;
+width:100%;
+z-index:2;
+}
+
+.header-img img{
+width:180px;
+height:240px;
+object-fit:cover;
+border-radius:50%;
+border:4px solid rgba(255,255,255,0.7);
+animation:animacionTotal 3s ease-in-out infinite;
+}
+
+.header-img::after{
+content:"";
+position:absolute;
+width:220px;
+height:220px;
+border-radius:50%;
+background:radial-gradient(circle,rgba(255,182,193,0.4),transparent);
+z-index:-1;
+animation:aura 3s infinite alternate;
+}
+
+@keyframes animacionTotal{
+0%{transform:translateY(0) scale(1);box-shadow:0 0 20px #fff;}
+50%{transform:translateY(-8px) scale(1.1);box-shadow:0 0 50px #fff;}
+100%{transform:translateY(0) scale(1);box-shadow:0 0 20px #fff;}
+}
+
+@keyframes aura{
+0%{transform:scale(1);opacity:0.6;}
+100%{transform:scale(1.2);opacity:1;}
+}
+
+.rosa{
+position:fixed;
+width:40px;
+height:40px;
+background-size:cover;
+pointer-events:none;
+z-index:1;
+opacity:0.95;
+animation:caerRosa linear infinite;
+}
+
+@keyframes caerRosa{
+0%{
+transform:translate(0,0) rotate(0deg);
+opacity:0;
+}
+10%{opacity:1;}
+50%{
+transform:translate(calc(var(--dx) * 0.5),50vh) rotate(180deg);
+}
+100%{
+transform:translate(var(--dx),110vh) rotate(360deg);
+opacity:0;
+}
+}
+
+.container{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:20px;
+width:90%;
+max-width:1200px;
+z-index:2;
+margin-bottom:40px;
+}
+
+.card{
+background:rgba(255,255,255,0.2);
+border:2px solid rgba(255,255,255,0.5);
+border-radius:20px;
+padding:20px;
+backdrop-filter:blur(15px);
+box-shadow:0 8px 25px rgba(0,0,0,0.4);
+transition:0.4s;
+cursor:pointer;
+text-align:center;
+}
+
+.card:hover{
+transform:translateY(-10px) scale(1.04);
+}
+
+.hidden{
+opacity:0;
+max-height:0;
+overflow:hidden;
+transition:0.4s;
+}
+
+.card.active .hidden{
+opacity:1;
+max-height:300px;
+margin-top:10px;
+}
+
+p{
+width:90%;
+max-width:900px;
+font-size:18px;
+margin-bottom:40px;
+z-index:2;
+}
+
+#btnMusica{
+position:fixed;
+bottom:20px;
+right:20px;
+padding:12px 18px;
+border:none;
+border-radius:30px;
+background:#ff4fa0;
+color:white;
+font-size:16px;
+cursor:pointer;
+box-shadow:0 5px 15px rgba(0,0,0,.4);
+z-index:999;
+}
+
+#btnMusica:hover{
+transform:scale(1.05);
+}
+</style>
+</head>
+
+<body>
+
+<audio id="musica" loop preload="auto">
+<source src="musica/Compañeros.mp3" type="audio/mpeg">
+</audio>
+
+<button id="btnMusica">🎵 Reproducir Música</button>
+
+<!-- IMAGEN -->
+<div class="header-img">
+<img src="imagen/gissel.png" alt="Gissel">
+</div>
+
+<div class="container">
+
+<div class="card" onclick="toggleCard(this)">
+<h2>TE QUIERO MUCHO</h2>
+<div class="hidden">
+✨Gissel, cada momento contigo ilumina mi vida como un brillo que nunca se apaga, aquel brillo radiante que Dios ha puesto en tu vida, con esa personalidad tan especial y única.✨
+</div>
+</div>
+
+<div class="card" onclick="toggleCard(this)">
+<h2>ERES MARAVILLOSA</h2>
+<div class="hidden">
+💓 Mi corazón se regocija en tu presencia y en la persona tan maravillosa que eres, sin duda gane todo al tenerte en mi vida, tú haces que todo sea mejor.💓
+</div>
+</div>
+
+<div class="card" onclick="toggleCard(this)">
+<h2>TE APRECIO MUCHO</h2>
+<div class="hidden">
+🎨 Contigo la vida tiene mucho más color, el aprecio que siento por ti es inmenso, ganaste mi confianza, amor y tranquilidad, sin duda eres una gran perla y joya preciosa de Dios.🥰
+</div>
+</div>
+
+<div class="card" onclick="toggleCard(this)">
+<h2>ERES MI APOYO</h2>
+<div class="hidden">
+🔊 Tu voz es mi paz, tu presencia es mi calma y tenerte en mi vida es un regalo que valoro cada día, sin duda eres mi apoyo incondicional.💖
+</div>
+</div>
+
+<div class="card" onclick="toggleCard(this)">
+<h2>TE NECESITO</h2>
+<div class="hidden">
+🎁 Eres el regalo en mi vida que Dios me permitió recibir, no quisiera perderte jamás; sin duda te necesito porque eres parte de mi vida.💕
+</div>
+</div>
+
+<div class="card" onclick="toggleCard(this)">
+<h2>ERES GRANDIOSA</h2>
+<div class="hidden">
+💖 Confío en ti profundamente, todo lo que describes y me haces sentir es un sentimiento indescriptible, realmente eres una mujer maravillosa y grandiosa.🥰
+</div>
+</div>
+
+<div class="card" onclick="toggleCard(this)">
+<h2>TE VALORO</h2>
+<div class="hidden">
+💖 Aquella conexión que Dios ha permitido en nuestras vidas es única. Valoro cada momento que compartimos.💎
+</div>
+</div>
+
+<div class="card" onclick="toggleCard(this)">
+<h2>ERES LA MEJOR</h2>
+<div class="hidden">
+⚡Eres mi alegría, mi felicidad y mi todo. No hay nadie igual a ti, eres única e inigualable.💖
+</div>
+</div>
+
+</div>
+
+<p>
+Mejores son dos que uno... Porque si cayeren, el uno levantará a su compañero. ✨ Eclesiastés 4:9-10 💖
+</p>
+
+<script>
+function toggleCard(card){
+card.classList.toggle("active");
+}
+
+function crearRosa(){
+const r=document.createElement('div');
+r.className='rosa';
+
+const rosas=[
+'https://pngimg.com/uploads/rose/rose_PNG659.png',
+'https://pngimg.com/uploads/rose/rose_PNG666.png',
+'https://pngimg.com/uploads/rose/rose_PNG649.png'
+];
+
+r.style.backgroundImage=`url(${rosas[Math.floor(Math.random()*rosas.length)]})`;
+
+r.style.left=Math.random()*100+'vw';
+r.style.top='-40px';
+
+const drift=(Math.random()*400-200);
+r.style.setProperty('--dx',drift+'px');
+
+r.style.animationDuration=(6+Math.random()*6)+'s';
+
+const size=30+Math.random()*30;
+r.style.width=r.style.height=size+'px';
+
+document.body.appendChild(r);
+setTimeout(()=>r.remove(),15000);
+}
+
+setInterval(()=>{
+for(let i=0;i<4;i++) crearRosa();
+},300);
+
+/* 🎵 BOTÓN REAL QUE SÍ FUNCIONA */
+const audio = document.getElementById("musica");
+const btn = document.getElementById("btnMusica");
+
+btn.addEventListener("click", function(){
+audio.volume = 0.7;
+audio.play();
+btn.innerHTML = "💖 Música Sonando";
+btn.style.background = "#7d2cff";
+});
+</script>
+
+</body>
+</html>
